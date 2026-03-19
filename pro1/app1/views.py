@@ -4,12 +4,12 @@ from .models import VisitingCard
 from .serializers import VisitingCardSerializer
 from rest_framework.parsers import MultiPartParser, FormParser
 
-# Create your views here.
+
 
 
 class VisitingCardViewSet(viewsets.ModelViewSet):
     queryset = VisitingCard.objects.all().order_by('-created_at')
     serializer_class = VisitingCardSerializer
-    parser_classes = (MultiPartParser, FormParser) # ફાઈલ અપલોડ માટે જરૂરી
+    parser_classes = (MultiPartParser, FormParser) 
 
     
